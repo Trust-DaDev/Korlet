@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Simple Web3 Wallet</title>
+        <script src="https://cdn.jsdelivr.net/npm/ethers@6.6.2/dist/ethers.umd.min.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+      </head>
+      
+      <body class="bg-gray-100 min-h-screen flex items-center justify-center">
+        <div class="max-w-md mx-auto mt-10 p-6 bg-white rounded-2xl shadow">
+            <h2 class="text-2xl font-bold mb-4">Transaction History</h2>
+            <button onclick="getTransactionHistory()" class="bg-gray-800 text-white px-4 py-2 rounded-lg mb-4">
+              Load Transactions
+            </button>
+            <ul id="txList" class="space-y-2 text-sm text-gray-700"></ul>
+          </div>
+          
+        <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md space-y-4">
+          <h1 class="text-2xl font-bold text-center">Simple Web3 Wallet</h1>
+      
+          <button id="connectButton" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+            Connect Wallet
+          </button>
+      
+          <div>
+            <p class="text-gray-600"><strong>Account:</strong> <span id="account">Not connected</span></p>
+            <p class="text-gray-600"><strong>Balance:</strong> <span id="balance">--</span></p>
+          </div>
+      
+          <h2 class="text-lg font-semibold">Send ETH</h2>
+      
+          <input type="text" id="recipient" placeholder="Recipient Address"
+            class="w-full border border-gray-300 p-2 rounded" />
+      
+          <input type="text" id="amount" placeholder="Amount in ETH"
+            class="w-full border border-gray-300 p-2 rounded" />
+      
+          <button id="sendButton" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700">
+            Send ETH
+          </button>
+        </div>
+      
+        <script src="app.js"></script>
+      </body>
+      
+</html>
